@@ -133,7 +133,7 @@ public class StoreKioskSystemMain {
 			System.out.println("1.메뉴선택 ");
 			System.out.println("2.장바구니확인");
 			System.out.println("3.장바구니비우기");
-			System.out.println("4.결제하기(매장&포장)");
+			System.out.println("4.결제하기");
 			System.out.println("5.관리자모드");
 			System.out.println("6.로그아웃");
 			System.out.println("―――――――――――――――――――――――――");
@@ -239,7 +239,7 @@ public class StoreKioskSystemMain {
 					System.out.println("4.메뉴삭제");
 					System.out.println("5.메뉴수정");
 					System.out.println("6.하루매출확인");
-					System.out.println("7.뒤로가기");
+					System.out.println("7.관리자메뉴 나가기");
 					System.out.println("―――――――――――――――――――――――――――――――");
 					System.out.print(">>");
 					no = Integer.parseInt(scan.nextLine());
@@ -472,7 +472,7 @@ public class StoreKioskSystemMain {
 		// 파일에서 가져오고 보조스트림을 정의한다.(Scanner)
 		FileInputStream fi;
 		try {
-			fi = new FileInputStream("D:/javastudy/storekiosksystem/src/res/userList.txt");
+			fi = new FileInputStream("E:/kiosk_project/storekiosksystem/src/res/userList.txt");
 			Scanner scan = new Scanner(fi);
 			// 첫라인 없앤다.
 			if (scan.hasNextLine()) {
@@ -507,7 +507,7 @@ public class StoreKioskSystemMain {
 		FileInputStream fi;
 		try {
 			// fi = new FileInputStream("res/dog.txt");
-			fi = new FileInputStream("D:/javastudy/storekiosksystem/src/res/menuList.txt");
+			fi = new FileInputStream("E:/kiosk_project/storekiosksystem/src/res/menuList.txt");
 			Scanner scan = new Scanner(fi);
 			// 첫라인 없앤다.
 			if (scan.hasNextLine()) {
@@ -542,7 +542,7 @@ public class StoreKioskSystemMain {
 			FileOutputStream fo = null;
 			PrintStream out = null;
 			try {
-				fo = new FileOutputStream("D:/javastudy/storekiosksystem/src/res/menuList.txt");
+				fo = new FileOutputStream("E:/kiosk_project/storekiosksystem/src/res/menuList.txt");
 				out = new PrintStream(fo);
 				// 파일 메뉴를 추가한다.
 				out.printf("%s", StoreKioskSystemMain.menuTitle);
@@ -571,7 +571,7 @@ public class StoreKioskSystemMain {
 			FileOutputStream fo = null;
 			PrintStream out = null;
 			try {
-				fo = new FileOutputStream("D:/javastudy/storekiosksystem/src/res/userList.txt");
+				fo = new FileOutputStream("E:/kiosk_project/storekiosksystem/src/res/userList.txt");
 				out = new PrintStream(fo);
 				// 파일 메뉴를 추가한다.
 				out.printf("%s", StoreKioskSystemMain.userTitle);
