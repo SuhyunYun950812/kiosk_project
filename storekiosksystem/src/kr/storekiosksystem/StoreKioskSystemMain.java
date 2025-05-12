@@ -78,7 +78,8 @@ public class StoreKioskSystemMain {
 										// user1에서 빼온 값과 생성하려는 아이디 입력값이 동일한게 있는지 equals로 비교한다.(문자열끼리 비교해서 equals 사용)
 										if (user1.getUserId().equals(userInput)) { // 두 문자열을 비교해서 동일한게 있다면 {} 안의 내용을
 																					// 실행한다.
-											System.out.print("/n이미 생성된 아이디가 있습니다. 다시 ");
+											System.out.println("이미 생성된 아이디가 있습니다. 다시 작성해주세요");
+											
 											findFlag = true; // 애초에 findFlag를 왜 썼지.
 										}
 									}
@@ -108,6 +109,7 @@ public class StoreKioskSystemMain {
 								userSave(owner.getUserList());
 
 								System.out.println(_user.toString()); // 생성된 아이디의 정보를 출력해준다.
+								break;
 							} // case2 block end
 							case 3:
 								stopFlag = true;
@@ -239,7 +241,7 @@ public class StoreKioskSystemMain {
 					System.out.println("4.메뉴삭제");
 					System.out.println("5.메뉴수정");
 					System.out.println("6.하루매출확인");
-					System.out.println("7.관리자메뉴 나가기");
+					System.out.println("7.관리자 메뉴 나가기");
 					System.out.println("―――――――――――――――――――――――――――――――");
 					System.out.print(">>");
 					no = Integer.parseInt(scan.nextLine());
@@ -256,7 +258,7 @@ public class StoreKioskSystemMain {
 
 						System.out.println("―――――――――――메뉴 출력――――――――――――");
 						for (Menu menu : owner.getStoreMenu()) {
-							System.out.println(menu.toString());
+							System.out.println(menu.menuString());
 						}
 						break;
 					}

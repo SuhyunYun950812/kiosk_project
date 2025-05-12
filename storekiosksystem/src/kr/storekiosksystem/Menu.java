@@ -48,7 +48,10 @@ public class Menu {
 	public String toString() {
 		return "메뉴명 = " + menuName + " | 갯수 = "+ count + " | 가격 = "+ price+"₩";
 	}
-
+	
+	public String menuString() {
+		return "메뉴명 = " + menuName + " | 가격 = "+ price+"₩";
+	}
 	/*
 	 * @Override public String toString() { return "메뉴명 = " + menuName + " / 가격 = "
 	 * + price+"₩"; }
